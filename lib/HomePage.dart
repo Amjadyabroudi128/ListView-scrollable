@@ -20,9 +20,21 @@ class _HomePageState extends State<HomePage> {
           Padding(
             padding: EdgeInsets.all(9.0),
             child: Container(
-              height: 200,
-              color: Colors.red,
-              child: Center(child: Text("Hello", style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),)),
+             child: Card(
+               child: Column(
+                 crossAxisAlignment: CrossAxisAlignment.start,
+                 mainAxisAlignment: MainAxisAlignment.start,
+                 children: [
+                   Text(
+                     "About us", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                   ),
+                   SizedBox(height: 10,),
+                   Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor "
+                       "incididunt ut labore et dolore magna aliqua."
+                       " Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.", style: TextStyle(fontSize: 15),)
+                 ],
+               ),
+             )
             ),
           ),
           Padding(
@@ -35,7 +47,7 @@ class _HomePageState extends State<HomePage> {
                   Padding(
                     padding: EdgeInsets.all(15.0),
                     child: Container(
-                      width: 200,
+                      width: 150,
                       decoration: BoxDecoration(
                           shape: BoxShape.circle,
                         color: Colors.blue
