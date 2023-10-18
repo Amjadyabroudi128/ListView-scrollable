@@ -1,5 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:listview/Home.dart';
+import 'package:listview/Profile.dart';
+import 'package:listview/Work.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -46,53 +49,77 @@ class _HomePageState extends State<HomePage> {
                 children: [
                   Padding(
                     padding: EdgeInsets.all(15.0),
-                    child: Container(
-                      width: 150,
-                      decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                        color: Colors.blue
-                      ),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Icon(Icons.person, size: 50,),
-                          Text("Profile", style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),),
-                        ],
-                      )
-                    ),
-                  ),
-                  Padding(
-                    padding: EdgeInsets.all(15.0),
-                    child: Container(
-                      width: 200,
-                      decoration: BoxDecoration(
-                          shape: BoxShape.circle,
+                    child: GestureDetector(
+                      onTap: (){
+                        Navigator.push(
+                          context,
+                          CupertinoPageRoute(builder: (context) =>  Profile()),
+                        );
+                      },
+                      child: Container(
+                        width: 150,
+                        decoration: BoxDecoration(
+                            shape: BoxShape.circle,
                           color: Colors.blue
-                      ),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Icon(Icons.work, size: 50,),
-                          Text("WORK TIME", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),)
-                        ],
+                        ),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Icon(Icons.person, size: 50,),
+                            Text("Profile", style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),),
+                          ],
+                        )
                       ),
                     ),
                   ),
                   Padding(
                     padding: EdgeInsets.all(15.0),
-                    child: Container(
-                      width: 200,
-                      decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          color: Colors.blue
+                    child: GestureDetector(
+                      onTap: (){
+                        Navigator.push(
+                          context,
+                          CupertinoPageRoute(builder: (context) =>  Work()),
+                        );
+                      },
+                      child: Container(
+                        width: 200,
+                        decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            color: Colors.blue
+                        ),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Icon(Icons.work, size: 50,),
+                            Text("WORK ", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),)
+                          ],
+                        ),
                       ),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Icon(Icons.home, size: 40,),
-                          Text("home ", style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold, ),)
-                        ],
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.all(15.0),
+                    child: GestureDetector(
+                      child: Container(
+                        width: 200,
+                        decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            color: Colors.blue
+                        ),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Icon(Icons.home, size: 40,),
+                            Text("home ", style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold, ),)
+                          ],
+                        ),
                       ),
+                      onTap: (){
+                        Navigator.push(
+                          context,
+                          CupertinoPageRoute(builder: (context) =>  Home()),
+                        );
+                      },
                     ),
                   ),
                 ],
