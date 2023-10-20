@@ -15,8 +15,8 @@ class Work extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Icon(Icons.work),
-            Text("Work")
+            Icon(Icons.person, size: 60, color: Colors.lightBlue,),
+            Text("this is for the work thing")
           ],
         ),
       ),
