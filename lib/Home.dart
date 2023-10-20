@@ -15,8 +15,8 @@ class Home extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Icon(Icons.home),
-            Text("HOME")
+            Icon(Icons.person, size: 60, color: Colors.lightBlue,),
+            Text("this is the home page")
           ],
         ),
       ),
