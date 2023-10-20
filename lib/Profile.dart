@@ -15,8 +15,8 @@ class Profile extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Icon(Icons.person),
-            Text("Profile")
+            Icon(Icons.person, size: 60, color: Colors.lightBlue,),
+            Text("this is for the profile page")
           ],
         ),
       ),
