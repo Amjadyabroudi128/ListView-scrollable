@@ -67,7 +67,7 @@ class _HomePageState extends State<HomePage> {
                             );
                             ScaffoldMessenger.of(context).showSnackBar(
                               SnackBar(
-                                content: Text('going to Profile screen'),
+                                content: Text('going to profile'),
                               ),
                             );
                           },
@@ -97,7 +97,7 @@ class _HomePageState extends State<HomePage> {
                             );
                             ScaffoldMessenger.of(context).showSnackBar(
                               SnackBar(
-                                content: Text('going to Work Screen'),
+                                content: Text('going to Work'),
                               ),
                             );
                           },
