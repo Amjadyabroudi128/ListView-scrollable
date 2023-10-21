@@ -10,6 +10,7 @@ class Home extends StatelessWidget {
     return Scaffold(
       appBar: AppBar
         (title: Text("Home"),
+        // this is home page
       ),
       body: Center(
         child: Column(
