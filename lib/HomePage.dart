@@ -20,10 +20,12 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         title: Text("Listview"),
       ),
+      //this is a scrollbar to navigte in the screen
       body: Scrollbar(
       thumbVisibility: true,
       trackVisibility: true,
         controller: _firstController,
+        // this is the vertical list view
         child: ListView(
           children: [
             Padding(
@@ -46,6 +48,7 @@ class _HomePageState extends State<HomePage> {
                ),
               ),
             ),
+            // this is the horizontal list view
             Padding(
               padding: EdgeInsets.all(9.0),
               child: Container(
