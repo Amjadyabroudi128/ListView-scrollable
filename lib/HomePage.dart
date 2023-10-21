@@ -48,7 +48,6 @@ class _HomePageState extends State<HomePage> {
                ),
               ),
             ),
-            // this is the horizontal list view
             Padding(
               padding: EdgeInsets.all(9.0),
               child: Container(
@@ -65,6 +64,11 @@ class _HomePageState extends State<HomePage> {
                             Navigator.push(
                               context,
                               CupertinoPageRoute(builder: (context) =>  Profile()),
+                            );
+                            ScaffoldMessenger.of(context).showSnackBar(
+                              SnackBar(
+                                content: Text('going to Profile screen'),
+                              ),
                             );
                           },
                           child: Container(
@@ -90,6 +94,11 @@ class _HomePageState extends State<HomePage> {
                             Navigator.push(
                               context,
                               CupertinoPageRoute(builder: (context) =>  Work()),
+                            );
+                            ScaffoldMessenger.of(context).showSnackBar(
+                              SnackBar(
+                                content: Text('going to Work Screen'),
+                              ),
                             );
                           },
                           child: Container(
@@ -130,6 +139,11 @@ class _HomePageState extends State<HomePage> {
                               context,
                               CupertinoPageRoute(builder: (context) =>  Home()),
                             );
+                            ScaffoldMessenger.of(context).showSnackBar(
+                               SnackBar(
+                                content: Text('going to home'),
+                              ),
+                            );
                           },
                         ),
                       ),
@@ -159,10 +173,19 @@ class _HomePageState extends State<HomePage> {
             ),
             Padding(
               padding: EdgeInsets.all(9.0),
-              child: Container(
-                height: 200,
-                color: Colors.red,
-                child: Center(child: Text("Hello", style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),)),
+              child: Card(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Text(
+                      "seeing how it looks ", style: TextStyle(fontWeight: FontWeight.w400, fontSize: 20),
+                    ),
+                    SizedBox(height: 10,),
+                    Text("this is just a text to see how it looks like right now it is bold",
+                      style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15),)
+                  ],
+                ),
               ),
             ),
             Padding(
